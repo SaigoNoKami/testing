@@ -1,0 +1,41 @@
+.message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word; 
+}
+
+.message.sent {
+  background-color: #d4edda;
+  align-self: flex-end;
+}
+
+.message.received {
+  background-color: #f8d7da;
+  align-self: flex-start;
+}
+
+.message-content {
+  word-break: break-word; 
+}
+
+.message-actions {
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.delete-button, .edit-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.delete-button:hover, .edit-button:hover {
+  background-color: #0056b3;
+}

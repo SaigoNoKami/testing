@@ -1,0 +1,36 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.login-form h2 {
+  text-align: center;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.login-form button {
+  padding: 10px;
+}
+
+.login-form .error {
+  color: red;
+  text-align: center;
+}
+
+.login-form .switch-form {
+  color: blue;
+  cursor: pointer;
+  text-align: center;
+}
