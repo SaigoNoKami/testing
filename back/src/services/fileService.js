@@ -1,7 +1,7 @@
 const stream = require("stream");
 const uuid = require("uuid");
 require("dotenv").config();
-const { bucket } = require("../db");
+const { bucket } = require("../utils/db");
 
 class FileService {
   async createFile(filename, fileStream) {

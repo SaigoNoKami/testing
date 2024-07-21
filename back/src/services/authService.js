@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { CryptoService } = require("../services/cryptoService");
-const { userRef, refreshTokenRef } = require("../db");
+const { userRef, refreshTokenRef } = require("../utils/db");
 
 class AuthService {
   constructor() {

@@ -2,7 +2,7 @@ const admin = require("firebase-admin");
 const { getStorage } = require("firebase-admin/storage");
 const dotenv = require("dotenv");
 dotenv.config();
-const serviceAccount = require("../cred.json"); // Путь к вашему ключу сервисного аккаунта Firebase
+const serviceAccount = require("../../cred.json"); 
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),

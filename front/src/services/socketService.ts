@@ -1,6 +1,6 @@
 import io from 'socket.io-client';
 import { IMessage } from '../models/IMessages';
-const socket = io(process.env.SERVER!); 
+const socket = io(process.env.REACT_APP_SERVER!); 
 
 const joinRoom = (userId: string) => {
   socket.emit('joinRoom', { userId });

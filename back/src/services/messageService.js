@@ -1,4 +1,4 @@
-const { messageRef } = require("../db");
+const { messageRef } = require("../utils/db");
 const fileService = require("../services/fileService");
 
 class MessageService {

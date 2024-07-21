@@ -1,4 +1,4 @@
-const { userRef } = require("../db");
+const { userRef } = require("../utils/db");
 
 class UserService {
   async getAll() {
