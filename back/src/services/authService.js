@@ -106,6 +106,14 @@ class AuthService {
       throw new Error("Failed to refresh tokens: " + error.message);
     }
   }
+  async deleteTokens(userId) {
+    try {
+      await refreshTokenRef.child(userId).remove();
+    } catch (error) {
+      throw new Error("Failed to generate tokens: " + error.message);
+    }
+  }
+
 }
 
 module.exports = AuthService;

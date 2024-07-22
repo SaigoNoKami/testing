@@ -63,3 +63,14 @@ exports.refresh = async (req, res) => {
     return res.status(500).send(`Error refreshing tokens: ${error.message}`);
   }
 };
+
+exports.logout = async (req, res) => {
+  try {
+    const {userId} = req.params
+    await authService.deleteTokens(userId)
+    return res.status(200).send()
+  } catch (error) {
+    console.error("Error logging in:", error);
+    return res.status(500).send(`Error logging in: ${error.message}`);
+  }
+};

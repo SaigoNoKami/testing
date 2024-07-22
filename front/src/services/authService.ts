@@ -11,8 +11,9 @@ export default class AuthService {
         return $api.post<AuthResponse>('/auth/register', {username, password})
     }
 
-    static async logout(): Promise<void> {
-        return $api.post('/auth/logout')
+    static async logout(userId: string): Promise<void> {
+        console.log(1)
+        return $api.delete(`/auth/logout/${encodeURIComponent(userId)}`)
     }
-
+ 
 }

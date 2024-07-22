@@ -46,14 +46,16 @@ export default class Store {
         }
     }
 
-    async logout() {
+    async logout(userID: string) {
         try {
-            const response = await AuthService.logout();
+            
+            const response = await AuthService.logout(userID);
+            console.log(1)
             localStorage.removeItem('token');
             this.setAuth(false);
             this.setUser({} as IUser);
         } catch (e) {
-            console.log(e.response?.data?.message);
+            //console.log(e.response?.data?.message);
         }
     }
 

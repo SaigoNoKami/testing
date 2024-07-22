@@ -15,7 +15,7 @@ exports.sendMessage = (io) => (req, res) => {
 
     bb.on("field", (fieldname, val) => {
       bbService.handleFields(fieldname, val);
-    });
+    }); 
 
     bb.on("finish", async () => {
       const message = await bbService.handlefinish(io);
